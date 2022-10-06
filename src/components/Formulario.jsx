@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { InputGroup, Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import Informacion from "./Informacion";
 
 const Formulario = () => {
-    //en esta variable meteremos los datos buscados en el input del form en el evento change (funcion handleChange).
+    //en esta variable guardamos los datos buscados en el input del form en el evento change (funcion handleChange).
     const [ciudad, setCiudad] = useState("");
-    //en esta variable metemos el valor de ciudad para que cuando haga la peticion a la Api la ciudad vaya escrita completa
+    //en esta variable guardamos el valor de ciudad para que cuando haga la peticion a la API la ciudad vaya escrita completa.
     const [ciudadOk, setCiudadOk] = useState("");
-    //en esta variable meteremos los datos que obtendremos de la API y la enviaremos por props al componente Informacion (la inicializo con valores vacios)
+    //en esta variable guardamos los datos que obtendremos de la API y la enviaremos por props al componente Informacion (la inicializo con valores vacios)
     const [datosClima, setDatosClima] = useState({
         coord: {},
         weather: [{ id: "", main: "", description: "", icon: "" }],
